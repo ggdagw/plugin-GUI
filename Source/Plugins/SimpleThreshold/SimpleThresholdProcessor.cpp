@@ -76,11 +76,13 @@ void SimpleThresholdProcessor::setParameter (int parameterIndex, float newValue)
 
     //Parameter& p =  parameters.getReference(parameterIndex);
     //p.setValue(newValue, 0);
-
     //threshold = newValue;
 
-    //std::cout << float(p[0]) << std::endl;
-    threshold = newValue;
+    //std::cout << "parameterIndex: " << parameterIndex << std::endl;
+    //std::cout << "old value for threshold: " << threshold << std::endl;
+    if (parameterIndex == 0)
+      threshold = newValue;
+    //std::cout << "new value for threshold: " << threshold << std::endl;
 }
 
 
